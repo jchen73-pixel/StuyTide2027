@@ -80,7 +80,7 @@ public class _37246_StuyTide_Auto extends LinearOpMode {
     private static final double MOVE_TIMEOUT_SECONDS = 8.0;
     private static final double TURN_TIMEOUT_SECONDS = 4.0;
 
-    private static final double LAUNCHER_TARGET_VELOCITY = 1180;
+    private static final double LAUNCHER_TARGET_VELOCITY = 1160;
     private static final double LAUNCHER_MIN_VELOCITY = 1100;
     private static final long LAUNCHER_SPINUP_TIMEOUT_MS = 3000;
     private static final double SHOOT_FEED_POWER = 0.5;
@@ -166,27 +166,42 @@ public class _37246_StuyTide_Auto extends LinearOpMode {
             // moveBy(-76, 0);
             // moveBy(0, -4);
             
-            // shoot(5000);
+            // Slightly more advanced 50% accuracy auto
+            shoot(5000);
             turnBy(-30);
             startIntake(1.0);
-            moveBy(0, -35);
+            moveBy(0, -46);
             turnBy(30);
             moveBy(10, 0);
-            moveBy(0, -10);
-            moveBy(0, 10);
-            waitMs(1000);
-            stopIntake();
-            goTo(0, 10, 180);
+            moveBy(0, -20);
+            moveBy(0, 20);
+            waitMs(500);
+            goTo(0, 15, 180);
             goTo(-130, 4, 180);
             shoot(5000);
             moveBy(10, 0);
             moveBy(0, -30);
-            goTo(-104, -42, 90);
+            goTo(-104, -48, 90);
+            stopIntake();
             
-            // waitMs(500);
-            // goTo(-28, -38, -90);
-            // moveBy(-76, 0);
-            // moveBy(0, -4);
+            // shoot(6000);
+            // startIntake(1.0);
+            // waitMs(250);
+            // moveBy(-8, 0);
+            // moveBy(0, -37);
+            // moveBy(8, 0);
+            // moveBy(0, 20);
+            // moveBy(0, -15);
+            // moveBy(-95, 0);
+            // moveBy(0, 44);
+            // moveBy(27, 0);
+            // turnBy(180);
+            // moveBy(0, -3);
+            // waitMs(250);
+            // shoot(6000);
+            // moveBy(10, 0);
+            // goTo(-104, -45, 0);
+            
             
             // --------------------------------------------------------------------
 
